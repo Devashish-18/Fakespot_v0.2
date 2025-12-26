@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <meta content="" name="keywords">
+        <meta content="" name="description">
+
+        <!-- Google Web Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@600;700;800&display=swap" rel="stylesheet"> 
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500&display=swap" rel="stylesheet">
+
+        <!-- Icon Font Stylesheet -->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+        <!-- Libraries Stylesheet -->
+        <link href="../static/lib/animate/animate.min.css" rel="stylesheet">
+        <link href="../static/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+        <!-- Customized Bootstrap Stylesheet -->
+        <link href="../static/css/bootstrap.min.css" rel="stylesheet">
+
+        <!-- Template Stylesheet -->
+        <link href="../static/css/chart.css" rel="stylesheet">
+    </head>
+
+    <body>
+        <!-- Spinner Start -->
+        <div id="spinner" class="show w-100 vh-100 bg-white position-fixed translate-middle top-50 start-50 d-flex align-items-center justify-content-center">
+            <div class="spinner-grow text-primary" role="status"></div>
+        </div>
+        <!-- Spinner End -->
+
+        <!-- Topbar Start -->
+      
+        <!-- Topbar End -->
+
+
+        
+        <div class="container-fluid bg-dark">
+            <div class="container">
+                <nav class="navbar navbar-dark navbar-expand-lg py-lg-0">
+                    <a href="{{url_for('index')}}" class="navbar-brand">
+                        <h1 class="text-primary mb-0 display-5">Instagram<span class="text-white">Fake Account</span></h1>
+                    </a>
+                    <button class="navbar-toggler bg-primary" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                        <span class="fa fa-bars text-dark"></span>
+                    </button>
+                    <div class="collapse navbar-collapse me-n3" id="navbarCollapse">
+                        <div class="navbar-nav ms-auto">
+                            <a href="{{url_for('index')}}" class="nav-item nav-link active">Home</a>
+                            <a href="{{url_for('login')}}" class="nav-item nav-link">Login</a>
+                          
+                            <a href="{{url_for('prediction')}}" class="nav-item nav-link">Prediction</a>
+                            <a href="{{url_for('performance')}}" class="nav-item nav-link">Performance Analysis</a>
+                            <a href="{{url_for('chart')}}" class="nav-item nav-link">Chart</a>
+                            <a href="{{url_for('index')}}" class="nav-item nav-link">Logout</a>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+
+        
+        <!-- Page Header Start -->
+        <div class="container-fluid page-header py-5">
+            <div class="container text-center py-5">
+                <h1 class="display-2 text-white mb-4 animated slideInDown">Chart</h1>
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb justify-content-center mb-0 animated slideInDown">
+                       
+                        <li class="breadcrumb-item text-white" aria-current="page">Instagram Fake Account Detection</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+        <!-- Page Header End -->
+
+
+        <!-- Contact Start -->
+        <div class="container-fluid py-5">
+            <div class="container py-5">
+                <div class="text-center mb-5 wow fadeInUp" data-wow-delay=".3s">
+                    <h5 class="mb-2 px-3 py-1 text-dark rounded-pill d-inline-block border border-2 border-primary">Instagram Fake Account Detection</h5>
+                    <h1 class="display-5 w-50 mx-auto">Chart</h1>
+                </div>
+                <div  style="margin-left:130px">
+                    <html>
+                        <head>
+                           <title></title>
+                           <script type = "text/javascript" src = "https://www.gstatic.com/charts/loader.js">
+                           </script>
+                           <script type = "text/javascript">
+                              google.charts.load('current', {packages: ['corechart']});     
+                           </script>
+                        </head>
+                        
+                        <body>
+                           <div id = "container" style = "width: 550px; height: 400px; margin: 0 auto">
+                           </div>
+                           <script language = "JavaScript">
+                              function drawChart() {
+                                 // Define the chart to be drawn.
+                                 var data = google.visualization.arrayToDataTable([
+                                    ['Model', 'Accuracy_score'],
+                                    ['RandomForestClassifier',  93],
+                                    ['DecisionTreeClassifier',  92]
+                                  
+                                 ]);
+                     
+                                 var options = {title: 'Accuracy_score'}; 
+                     
+                                 // Instantiate and draw the chart.
+                                 var chart = new google.visualization.BarChart(document.getElementById('container'));
+                                 chart.draw(data, options);
+                              }
+                              google.charts.setOnLoadCallback(drawChart);
+                           </script>
+                        </body>
+                     </html>
+          
+                     <br>
+                     <br>
+                     
+          
+                      <head>
+                        <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+                        <script type="text/javascript">
+                          google.charts.load("current", {packages:["corechart"]});
+                          google.charts.setOnLoadCallback(drawChart);
+                          function drawChart() {
+                            var data = google.visualization.arrayToDataTable([
+                              ['class', 'Hours per Day'],
+                              ['Fake',     60],
+                             
+                              ['real',    40],
+                        
+                            ]);
+                    
+                            var options = {
+                              title: '',
+                              is3D: true,
+                            };
+                    
+                            var chart = new google.visualization.PieChart(document.getElementById('piechart_3d'));
+                            chart.draw(data, options);
+                          }
+                        
+                        </script>
+                      </head>
+                      <body>
+                       
+                       
+                      <div id="piechart_3d" style="width: 900px; height: 500px; "></div>
+                       
+                      </body>
+                          
+                          
+                     
+                    
+            </div>
+        </div>
+        <!-- Contact End -->
+
+
+        <!-- Footer Start -->
+        <div class="container-fluid footer py-5 wow fadeIn" data-wow-delay=".3s">
+            <div class="container py-5">
+                 
+              
+            </div>
+        </div>
+        <!-- Footer End -->
+
+
+
+       
+        <!-- Copyright End -->
+        
+
+        <!-- Back to Top -->
+        <a href="#" class="btn btn-primary rounded-circle border-3 back-to-top"><i class="fa fa-arrow-up"></i></a>
+
+        
+        <!-- JavaScript Libraries -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="../static/lib/wow/wow.min.js"></script>
+        <script src="../static/lib/easing/easing.min.js"></script>
+        <script src="../static/lib/waypoints/waypoints.min.js"></script>
+        <script src="../static/lib/owlcarousel/owl.carousel.min.js"></script>
+
+        <!-- Template Javascript -->
+        <script src="../static/js/main.js"></script>
+    </body>
+
+</html>
