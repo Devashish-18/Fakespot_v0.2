@@ -1,0 +1,12 @@
+Fake Profile Detection on Social Networking Websites using Machine Learning.
+
+Algorithm / Model Used: Random Forest Classifier.
+
+Accuracy Train Score: 100% and Test Score: 93%.
+*******************************************************
+Algorithm / Model Used: Decision Tree Classifier.
+
+Accuracy Train Score: 92% and Test Score: 92%
+*******************************************************
+
+

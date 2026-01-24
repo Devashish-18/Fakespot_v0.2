@@ -1,0 +1,11 @@
+Variable,Description
+profile pic,user has profile picture or not
+nums/length username,ratio of number of numerical chars in username to its length
+fullname words,full name in word tokens
+nums/length fullname,ratio of number of numerical characters in full name to its length
+name==username,are username and full name literally the same
+description length,bio length in characters
+external URL,has external URL or not
+private,private or not
+#posts,number of posts
+#followers,number of followers

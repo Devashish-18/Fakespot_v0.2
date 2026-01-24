@@ -1,2 +1,3 @@
-# Fakespot_v0.2
-Fakespot is an online review analysis platform that detects fake, misleading, and low-quality reviews on e-commerce and social platforms. It uses machine learning, NLP, and behavioral analysis to evaluate the authenticity of reviews, sellers, and products.
+# fakespot
+
+Fakespot v0.2 is a machine-learning–based system designed to detect and classify fake or suspicious user profiles on social platforms and online communities. The project analyzes behavioral patterns, profile attributes, and activity signals to identify accounts that show characteristics of bots, spam accounts, or fake identities. 
